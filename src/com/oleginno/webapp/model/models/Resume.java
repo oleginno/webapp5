@@ -159,6 +159,6 @@ public class Resume {
     }
 
     public String toString() {
-        return "" + name + " " + surname;
+        return name + " " + surname;
     }
 }
