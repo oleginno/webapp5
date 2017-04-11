@@ -1,8 +1,8 @@
-package com.oleginno.webapp.model.models;
+package com.oleginno.webapp.models;
 
 
-import com.oleginno.webapp.model.interfaces.Dated;
-import com.oleginno.webapp.model.interfaces.Titled;
+import com.oleginno.webapp.interfaces.Dated;
+import com.oleginno.webapp.interfaces.Titled;
 
 
 public abstract class Activity implements Dated, Titled {

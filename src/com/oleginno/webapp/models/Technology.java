@@ -1,7 +1,7 @@
-package com.oleginno.webapp.model.models;
+package com.oleginno.webapp.models;
 
 
-import com.oleginno.webapp.model.interfaces.Titled;
+import com.oleginno.webapp.interfaces.Titled;
 
 
 public class Technology implements Titled, Comparable<Technology> {

@@ -1,4 +1,4 @@
-package com.oleginno.webapp.model.interfaces;
+package com.oleginno.webapp.interfaces;
 
 
 public interface Descripted {

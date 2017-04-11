@@ -1,4 +1,4 @@
-package com.oleginno.webapp.model.models;
+package com.oleginno.webapp.models;
 
 
 public class Objective extends Experience {

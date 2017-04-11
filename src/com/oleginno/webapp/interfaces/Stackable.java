@@ -1,7 +1,7 @@
-package com.oleginno.webapp.model.interfaces;
+package com.oleginno.webapp.interfaces;
 
 
-import com.oleginno.webapp.model.models.Technology;
+import com.oleginno.webapp.models.Technology;
 
 import java.util.Set;
 

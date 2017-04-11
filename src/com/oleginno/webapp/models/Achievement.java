@@ -1,4 +1,4 @@
-package com.oleginno.webapp.model.models;
+package com.oleginno.webapp.models;
 
 
 public class Achievement extends Experience implements Comparable<Achievement> {

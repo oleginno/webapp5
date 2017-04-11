@@ -1,5 +1,4 @@
-package com.oleginno.webapp.model.models;
-
+package com.oleginno.webapp.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +8,7 @@ import java.util.TreeSet;
 
 public class Resume {
 
-    private String name;
-
-    private String surname;
-
-    private String fatherName;
+    private String fullName;
 
     private Objective objective;
 
@@ -29,7 +24,7 @@ public class Resume {
 
     private String webSite;
 
-    private String address;
+    private String location;
 
     private Set<String> mailBox = new TreeSet<>();
 
@@ -38,36 +33,19 @@ public class Resume {
     private String skype;
 
 
-    public Resume(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
+    public Resume(String name) {
+        this.fullName = name;
     }
 
     public Resume() {}
 
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getFatherName() {
-        return fatherName;
-    }
-
-    public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public Objective getObjective() {
@@ -126,12 +104,12 @@ public class Resume {
         this.webSite = webSite;
     }
 
-    public String getAddress() {
-        return address;
+    public String getLocation() {
+        return location;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public Set<String> getMailBox() {
@@ -159,6 +137,6 @@ public class Resume {
     }
 
     public String toString() {
-        return name + " " + surname;
+        return fullName;
     }
 }

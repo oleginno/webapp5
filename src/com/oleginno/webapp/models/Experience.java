@@ -1,10 +1,10 @@
-package com.oleginno.webapp.model.models;
+package com.oleginno.webapp.models;
 
 
-import com.oleginno.webapp.model.interfaces.Dated;
-import com.oleginno.webapp.model.interfaces.Descripted;
-import com.oleginno.webapp.model.interfaces.Stackable;
-import com.oleginno.webapp.model.interfaces.Titled;
+import com.oleginno.webapp.interfaces.Dated;
+import com.oleginno.webapp.interfaces.Descripted;
+import com.oleginno.webapp.interfaces.Stackable;
+import com.oleginno.webapp.interfaces.Titled;
 
 import java.util.Set;
 import java.util.TreeSet;

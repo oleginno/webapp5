@@ -1,8 +1,8 @@
 package main;
 
 
-import com.oleginno.webapp.model.models.Achievement;
-import com.oleginno.webapp.model.models.Resume;
+import com.oleginno.webapp.models.Achievement;
+import com.oleginno.webapp.models.Resume;
 
 
 public class Main {
