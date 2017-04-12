@@ -9,7 +9,8 @@ public class Employment extends Activity {
         this.employmentTitle = employmentTitle;
     }
 
-    public Employment() {}
+    public Employment() {
+    }
 
     @Override
     public String getTitle() {

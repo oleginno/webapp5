@@ -10,7 +10,8 @@ public class Achievement extends Experience implements Comparable<Achievement> {
         this.achievementTitle = title;
     }
 
-    public Achievement() {}
+    public Achievement() {
+    }
 
     public Achievement(String achievementTitle) {
         this.achievementTitle = achievementTitle;

@@ -37,7 +37,8 @@ public class Resume {
         this.fullName = name;
     }
 
-    public Resume() {}
+    public Resume() {
+    }
 
 
     public String getFullName() {
