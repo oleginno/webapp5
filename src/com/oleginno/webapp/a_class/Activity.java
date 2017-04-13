@@ -1,4 +1,4 @@
-package com.oleginno.webapp.models;
+package com.oleginno.webapp.a_class;
 
 
 import com.oleginno.webapp.interfaces.Dated;

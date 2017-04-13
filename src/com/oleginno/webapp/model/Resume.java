@@ -1,4 +1,4 @@
-package com.oleginno.webapp.models;
+package com.oleginno.webapp.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +22,11 @@ public class Resume {
 
     private String photo;
 
-    private String webSite;
+    private Link webSite;
 
     private String location;
 
-    private Set<String> mailBox = new TreeSet<>();
-
-    private Set<String> phones = new TreeSet<>();
-
-    private String skype;
+    private Set<Contact> contacts = new TreeSet<>();
 
 
     public Resume(String name) {
@@ -97,11 +93,11 @@ public class Resume {
         this.photo = photo;
     }
 
-    public String getWebSite() {
+    public Link getWebSite() {
         return webSite;
     }
 
-    public void setWebSite(String webSite) {
+    public void setWebSite(Link webSite) {
         this.webSite = webSite;
     }
 
@@ -113,28 +109,12 @@ public class Resume {
         this.location = location;
     }
 
-    public Set<String> getMailBox() {
-        return mailBox;
+    public Set<Contact> getContacts() {
+        return contacts;
     }
 
-    public void setMailBox(Set<String> mailBox) {
-        this.mailBox = mailBox;
-    }
-
-    public Set<String> getPhones() {
-        return phones;
-    }
-
-    public void setPhones(Set<String> phones) {
-        this.phones = phones;
-    }
-
-    public String getSkype() {
-        return skype;
-    }
-
-    public void setSkype(String skype) {
-        this.skype = skype;
+    public void setContacts(Set<Contact> contacts) {
+        this.contacts = contacts;
     }
 
     public String toString() {

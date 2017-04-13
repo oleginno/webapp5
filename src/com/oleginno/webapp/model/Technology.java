@@ -1,4 +1,4 @@
-package com.oleginno.webapp.models;
+package com.oleginno.webapp.model;
 
 
 import com.oleginno.webapp.interfaces.Titled;
