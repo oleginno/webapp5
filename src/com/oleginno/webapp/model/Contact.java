@@ -1,7 +1,5 @@
 package com.oleginno.webapp.model;
 
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Oleh Savych
@@ -10,47 +8,26 @@ import java.util.TreeSet;
 
 public class Contact implements Comparable<Contact> {
 
-    private String mailBox;
+    private final ContactType type;
 
-    private Set<String> phones = new TreeSet<>();
-
-    private String skype;
+    private final String value;
 
 
-    public Contact(String phone, String mail) {
-        getPhones().add(phone);
-        this.mailBox = mail;
+    public Contact(ContactType type, String value) {
+        this.type = type;
+        this.value = value;
     }
 
-    public Contact() {
+    public ContactType getType() {
+        return type;
     }
 
-    public String getMailBox() {
-        return mailBox;
-    }
-
-    public void setMailBox(String mailBox) {
-        this.mailBox = mailBox;
-    }
-
-    public Set<String> getPhones() {
-        return phones;
-    }
-
-    public void setPhones(Set<String> phones) {
-        this.phones = phones;
-    }
-
-    public String getSkype() {
-        return skype;
-    }
-
-    public void setSkype(String skype) {
-        this.skype = skype;
+    public String getValue() {
+        return value;
     }
 
     @Override
     public int compareTo(Contact o) {
-        return this.mailBox.compareTo(o.mailBox);
+        return this.value.compareTo(o.value);
     }
 }

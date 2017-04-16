@@ -1,15 +1,15 @@
 package main;
 
+import com.oleginno.webapp.model.Link;
 
-import com.oleginno.webapp.model.Achievement;
-import com.oleginno.webapp.model.Resume;
+import java.util.Arrays;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Resume mine = new Resume("Oleh Savych");
-        mine.getAchievements().add(new Achievement("first"));
-        System.out.println(mine);
+
+        Link l = new Link("Oleh", null);
+        System.out.println(Arrays.toString(l.getClass().getDeclaredFields()));
     }
 }
