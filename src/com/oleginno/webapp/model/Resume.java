@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 
-public class Resume {
+public class Resume implements Comparable<Resume> {
 
     private String uuid;
 
@@ -73,7 +73,20 @@ public class Resume {
     }
 
     @Override
+    public String toString() {
+        return "Resume{" +
+                "fullName='" + fullName + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return uuid.hashCode();
+    }
+
+    @Override
+    public int compareTo(Resume o) {
+        return this.getFullName().compareTo(o.getFullName());
     }
 }
