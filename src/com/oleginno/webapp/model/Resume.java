@@ -86,7 +86,7 @@ public class Resume implements Comparable<Resume> {
     }
 
     @Override
-    public int compareTo(Resume o) {
-        return this.getFullName().compareTo(o.getFullName());
+    public int compareTo(Resume o) throws NullPointerException {
+        return this.getUuid().compareTo(o.getUuid());
     }
 }

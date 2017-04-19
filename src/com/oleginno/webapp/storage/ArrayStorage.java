@@ -2,9 +2,7 @@ package com.oleginno.webapp.storage;
 
 import com.oleginno.webapp.model.Resume;
 
-import java.util.Collection;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Oleh Savych
@@ -15,9 +13,11 @@ public class ArrayStorage implements IStorage {
 
     private static final int LIMIT = 100;
 
-    private static final String MESSAGE = "Object is not present in array!";
+    private final String MESSAGE = "Object isn't present in array storage!";
 
     private Resume[] array = new Resume[LIMIT];
+
+    private static boolean isSorted = false;
 
 
     public int aliveInstancesCount() {
@@ -31,28 +31,20 @@ public class ArrayStorage implements IStorage {
         return count;
     }
 
-    private int search(Resume resume) {
-        int index = -1;
-
-        for (int i = 0; i < LIMIT; i++) {
-            if (array[i] != null && array[i].equals(resume)) {
-                index = i;
-                return index;
-            }
+    private void sort() {
+        if (!isSorted) {
+            Arrays.sort(array, new NullSafeComparatorById());
+            isSorted = true;
         }
-        return index;
+    }
+
+    private int search(Resume resume) {
+        sort();
+        return Arrays.binarySearch(array, resume, new NullSafeComparatorById());
     }
 
     private int searchById(String uuid) {
-        int index = -1;
-
-        for (int i = 0; i < LIMIT; i++) {
-            if (array[i] != null && array[i].getUuid().equals(uuid)) {
-                index = i;
-                return index;
-            }
-        }
-        return index;
+        return search(new Resume(uuid, null, null));
     }
 
     @Override
@@ -62,33 +54,35 @@ public class ArrayStorage implements IStorage {
                 array[i] = null;
             }
         }
+        isSorted = false;
     }
 
     @Override
     public void save(Resume resume) {
         if (search(resume) >= 0) {
-            throw new IllegalStateException("Already present");
+            throw new IllegalStateException("Already is present");
         } else {
             for (int i = 0; i < LIMIT; i++) {
                 if (array[i] == null) {
                     array[i] = resume;
+
+                    isSorted = false;
                     return;
                 }
             }
+            throw new IllegalStateException("There is no free space in the array!");
         }
     }
 
     @Override
     public void update(Resume resume) {
-        if (search(resume) < 0) {
+        int index = search(resume);
+
+        if (index < 0) {
             throw new IllegalStateException(MESSAGE);
         } else {
-            for (int i = 0; i < LIMIT; i++) {
-                if (array[i] != null && array[i].equals(resume)) {
-                    array[i] = resume;
-                    return;
-                }
-            }
+            array[index] = resume;
+            isSorted = false;
         }
     }
 
@@ -106,8 +100,10 @@ public class ArrayStorage implements IStorage {
     @Override
     public void delete(String uuid) {
         int index = searchById(uuid);
+
         if (index >= 0) {
             array[index] = null;
+            isSorted = false;
         } else {
             throw new IllegalStateException(MESSAGE);
         }
@@ -115,7 +111,9 @@ public class ArrayStorage implements IStorage {
 
     @Override
     public Collection<Resume> getAllSorted() {
-        Set<Resume> sortedCollection = new TreeSet<>();
+        Set<Resume> sortedCollection = new TreeSet<>(new NullSafeComparatorByName());
+        sort();
+
         for (Resume item: array) {
             if (item != null) {
                 sortedCollection.add(item);
@@ -127,5 +125,37 @@ public class ArrayStorage implements IStorage {
     @Override
     public int size() {
         return LIMIT;
+    }
+
+    private static class NullSafeComparatorById implements Comparator<Resume> {
+        @Override
+        public int compare(Resume o1, Resume o2) {
+            if (o1 == null && o2 == null) {
+                return 0;
+            }
+            if (o1 == null) {
+                return 1;
+            }
+            if (o2 == null) {
+                return -1;
+            }
+            return o1.compareTo(o2);
+        }
+    }
+
+    private static class NullSafeComparatorByName implements Comparator<Resume> {
+        @Override
+        public int compare(Resume o1, Resume o2) {
+            if (o1 == null && o2 == null) {
+                return 0;
+            }
+            if (o1 == null) {
+                return 1;
+            }
+            if (o2 == null) {
+                return -1;
+            }
+            return o1.getFullName().compareTo(o2.getFullName());
+        }
     }
 }

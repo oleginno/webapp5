@@ -51,20 +51,22 @@ public class ArrayStorageTest {
 
     @Test
     public void update() throws Exception {
-        arrayStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
+        //arrayStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
         System.out.println(arrayStorage.getAllSorted().toString());
     }
 
     @Test
     public void load() throws Exception {
-        //System.out.println(arrayStorage.load(r3.getUuid()));
+        //System.out.println(arrayStorage.load(r2.getUuid()));
         Assert.assertEquals("Kolomyia", arrayStorage.load(r2.getUuid()).getLocation());
     }
 
     @Test
     public void delete() throws Exception {
         arrayStorage.delete(r1.getUuid());
-        //Assert.assertEquals(100, arrayStorage.size());
+        for (Resume item: arrayStorage.getAllSorted()) {
+            System.out.print(item.getFullName() + " ");
+        }
         Assert.assertEquals(2, arrayStorage.aliveInstancesCount());
     }
 
