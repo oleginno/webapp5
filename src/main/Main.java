@@ -8,6 +8,5 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayStorage temp = new ArrayStorage();
-        System.out.println(temp.aliveInstancesCount());
     }
 }

@@ -40,13 +40,13 @@ public class ArrayStorageTest {
     @Test
     public void clear() throws Exception {
         //arrayStorage.clear();
-        Assert.assertEquals(3, arrayStorage.aliveInstancesCount());
+        Assert.assertEquals(3, arrayStorage.size());
     }
 
     @Test
     public void save() throws Exception {
         //arrayStorage.save(new Resume("Oleh Savych 4", "None"));
-        Assert.assertEquals(3, arrayStorage.aliveInstancesCount());
+        Assert.assertEquals(3, arrayStorage.size());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class ArrayStorageTest {
         for (Resume item: arrayStorage.getAllSorted()) {
             System.out.print(item.getFullName() + " ");
         }
-        Assert.assertEquals(2, arrayStorage.aliveInstancesCount());
+        Assert.assertEquals(2, arrayStorage.size());
     }
 
     @Test
@@ -79,6 +79,6 @@ public class ArrayStorageTest {
 
     @Test
     public void size() throws Exception {
-        Assert.assertEquals(100, arrayStorage.size());
+        Assert.assertEquals(3, arrayStorage.size());
     }
 }

@@ -17,10 +17,14 @@ public class ArrayStorage implements IStorage {
 
     private Resume[] array = new Resume[LIMIT];
 
-    private static boolean isSorted = false;
+    private boolean isSorted = false;
+
+    private int realSize = 0;
+
+    private boolean isActualSize = false;
 
 
-    public int aliveInstancesCount() {
+    public void aliveInstancesCount() {
         int count = 0;
 
         for (int i = 0; i < LIMIT; i++) {
@@ -28,7 +32,8 @@ public class ArrayStorage implements IStorage {
                 count++;
             }
         }
-        return count;
+        realSize = count;
+        isActualSize = true;
     }
 
     private void sort() {
@@ -44,7 +49,7 @@ public class ArrayStorage implements IStorage {
     }
 
     private int searchById(String uuid) {
-        return search(new Resume(uuid, null, null));
+        return search(new Resume(uuid, "", ""));
     }
 
     @Override
@@ -62,15 +67,26 @@ public class ArrayStorage implements IStorage {
         if (search(resume) >= 0) {
             throw new IllegalStateException("Already is present");
         } else {
-            for (int i = 0; i < LIMIT; i++) {
-                if (array[i] == null) {
-                    array[i] = resume;
-
-                    isSorted = false;
-                    return;
-                }
+            if (!isActualSize) {
+                aliveInstancesCount();
             }
-            throw new IllegalStateException("There is no free space in the array!");
+            if (realSize <= LIMIT) {
+                array[realSize] = resume;
+
+                realSize++;
+                isSorted = false;
+            } else {
+                throw new IllegalStateException("There is no free space in the array!");
+            }
+//            for (int i = 0; i < LIMIT; i++) {
+//                if (array[i] == null) {
+//                    array[i] = resume;
+//
+//                    isSorted = false;
+//                    return;
+//                }
+//            }
+//            throw new IllegalStateException("There is no free space in the array!");
         }
     }
 
@@ -104,6 +120,9 @@ public class ArrayStorage implements IStorage {
         if (index >= 0) {
             array[index] = null;
             isSorted = false;
+
+            realSize--;
+            isActualSize = false;
         } else {
             throw new IllegalStateException(MESSAGE);
         }
@@ -114,7 +133,7 @@ public class ArrayStorage implements IStorage {
         Set<Resume> sortedCollection = new TreeSet<>(new NullSafeComparatorByName());
         sort();
 
-        for (Resume item: array) {
+        for (Resume item : array) {
             if (item != null) {
                 sortedCollection.add(item);
             }
@@ -124,7 +143,7 @@ public class ArrayStorage implements IStorage {
 
     @Override
     public int size() {
-        return LIMIT;
+        return realSize;
     }
 
     private static class NullSafeComparatorById implements Comparator<Resume> {
