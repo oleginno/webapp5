@@ -39,33 +39,44 @@ public class ArrayStorageTest {
 
     @Test
     public void clear() throws Exception {
-        //arrayStorage.clear();
-        Assert.assertEquals(3, arrayStorage.size());
+        arrayStorage.clear();
+        Assert.assertEquals(0, arrayStorage.size());
     }
 
     @Test
     public void save() throws Exception {
-        //arrayStorage.save(new Resume("Oleh Savych 4", "None"));
-        Assert.assertEquals(3, arrayStorage.size());
+        arrayStorage.save(new Resume("Oleh Savych 4", "None"));
+        for (Resume item: arrayStorage.getArray()) {
+            if (item != null) {
+                System.out.print(item.getFullName() + " ");
+            } else {
+                break;
+            }
+        }
+        Assert.assertEquals(4, arrayStorage.size());
     }
 
     @Test
     public void update() throws Exception {
-        //arrayStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
+        arrayStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
         System.out.println(arrayStorage.getAllSorted().toString());
     }
 
     @Test
     public void load() throws Exception {
-        //System.out.println(arrayStorage.load(r2.getUuid()));
+        System.out.println(arrayStorage.load(r2.getUuid()));
         Assert.assertEquals("Kolomyia", arrayStorage.load(r2.getUuid()).getLocation());
     }
 
     @Test
     public void delete() throws Exception {
         arrayStorage.delete(r1.getUuid());
-        for (Resume item: arrayStorage.getAllSorted()) {
-            System.out.print(item.getFullName() + " ");
+        for (Resume item: arrayStorage.getArray()) {
+            if (item != null) {
+                System.out.print(item.getFullName() + " ");
+            } else {
+                break;
+            }
         }
         Assert.assertEquals(2, arrayStorage.size());
     }

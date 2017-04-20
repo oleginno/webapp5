@@ -63,16 +63,6 @@ public class Resume implements Comparable<Resume> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Resume resume = (Resume) o;
-
-        return uuid.equals(resume.uuid);
-    }
-
-    @Override
     public String toString() {
         return "Resume{" +
                 "fullName='" + fullName + '\'' +
@@ -81,8 +71,28 @@ public class Resume implements Comparable<Resume> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Resume resume = (Resume) o;
+
+        return uuid.equals(resume.uuid) && fullName.equals(resume.fullName)
+                && location.equals(resume.location)
+                && (homePage != null ? homePage.equals(resume.homePage) : resume.homePage == null)
+                && (contacts != null ? contacts.equals(resume.contacts) : resume.contacts == null)
+                && (sections != null ? sections.equals(resume.sections) : resume.sections == null);
+    }
+
+    @Override
     public int hashCode() {
-        return uuid.hashCode();
+        int result = uuid.hashCode();
+        result = 31 * result + fullName.hashCode();
+        result = 31 * result + location.hashCode();
+        result = 31 * result + (homePage != null ? homePage.hashCode() : 0);
+        result = 31 * result + (contacts != null ? contacts.hashCode() : 0);
+        result = 31 * result + (sections != null ? sections.hashCode() : 0);
+        return result;
     }
 
     @Override
