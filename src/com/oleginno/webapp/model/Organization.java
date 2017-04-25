@@ -1,5 +1,6 @@
 package com.oleginno.webapp.model;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,5 +12,25 @@ public class Organization {
 
     private Link link;
 
-    private List<OrganizationPeriod> periods;
+    private List<Period> periods;
+
+
+    public class Period {
+
+        private Date startDate;
+
+        private Date endDate;
+
+        private String position;
+
+        private String content;
+
+        public Period(Date startDate, Date endDate) {
+            this.startDate = startDate;
+            this.endDate = endDate;
+        }
+
+        public Period() {
+        }
+    }
 }

@@ -3,26 +3,18 @@ package com.oleginno.webapp.storage;
 import com.oleginno.webapp.WebAppException;
 import com.oleginno.webapp.model.Resume;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.logging.Logger;
+import java.util.*;
 
 /**
  * Oleh Savych
  * 17.04.17
  */
 
-public class ArrayStorage implements IStorage {
+public class ArrayStorage extends AbstractStorage {
 
-    //protected Logger LOGGER = Logger.getLogger(getClass().getName());
-    private static Logger log = Logger.getLogger(ArrayStorage.class.getName());
+    private final int limit = 100;
 
-    private final int LIMIT = 100;
-
-    private Resume[] array = new Resume[LIMIT];
+    private Resume[] array = new Resume[limit];
 
     private boolean isSorted = false;
 
@@ -31,10 +23,10 @@ public class ArrayStorage implements IStorage {
     private boolean isActualSize = false;
 
 
-    private synchronized void aliveInstancesCount() {
+    private synchronized void aliveInstanceCount() {
         int count = 0;
 
-        for (int i = 0; i < LIMIT; i++) {
+        for (int i = 0; i < limit; i++) {
             if (array[i] != null) {
                 count++;
             }
@@ -44,155 +36,98 @@ public class ArrayStorage implements IStorage {
     }
 
     private synchronized void sort() {
-        if (!isSorted) {
-            log.info("Sorting...");
-            Arrays.sort(array, new NullSafeComparatorById());
-            isSorted = true;
-        }
+        log.info("Sorting...");
+        Arrays.sort(array, new NullSafeComparatorById());
+        isSorted = true;
     }
 
-    private synchronized int search(Resume resume) {
-        sort();
+    private synchronized int searchForIndex(Resume resume) {
+        if (!isSorted) {
+            sort();
+        }
         return Arrays.binarySearch(array, resume, new NullSafeComparatorById());
     }
 
-    private int searchById(String uuid) {
-        return search(new Resume(uuid, "", ""));
+    private synchronized int searchForIndex(String uuid) {
+        if (!isSorted) {
+            sort();
+        }
+        return Arrays.binarySearch(array,
+                new Resume(uuid, "", ""),
+                new NullSafeComparatorById());
     }
 
     @Override
-    public synchronized void clear() {
+    protected synchronized boolean search(Resume resume) {
+        if (!isSorted) {
+            sort();
+        }
+        return Arrays.binarySearch(array, resume, new NullSafeComparatorById()) >= 0;
+    }
+
+    @Override
+    public synchronized void doClear() {
         if (!isActualSize) {
-            aliveInstancesCount();
+            aliveInstanceCount();
         }
         for (int i = 0; i < realSize; i++) {
             array[i] = null;
         }
-        log.info("Deleting all resumes...");
         realSize = 0;
         isActualSize = false;
+        isSorted = true;
+    }
+
+    @Override
+    public synchronized void doSave(Resume resume) {
+        if (!isActualSize) {
+            aliveInstanceCount();
+        }
+        if (realSize == limit) {
+            array = Arrays.copyOf(array, array.length + 32);
+        }
+        array[realSize++] = resume;
         isSorted = false;
     }
 
     @Override
-    public synchronized void save(Resume resume) {
-        if (search(resume) >= 0) {
-            throw new WebAppException("Resume " + resume.getUuid() + " already exists", resume);
-        } else {
-            if (!isActualSize) {
-                aliveInstancesCount();
-            }
-            if (realSize <= LIMIT) {
-                array[realSize++] = resume;
-                log.info("Saving resume with uuid = " + resume.getUuid());
-
-                isSorted = false;
-            } else {
-                try {
-                    throw new WebAppException("There is no free space in the array!");
-                } catch (WebAppException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+    public synchronized void doUpdate(Resume resume) {
+        array[searchForIndex(resume)] = resume;
+        isSorted = false;
     }
 
     @Override
-    public synchronized void update(Resume resume) {
-        int index = search(resume);
-
-        if (index == -1) {
-            throw new WebAppException("Resume " + resume.getUuid() + " not exist", resume);
-        } else {
-            log.info("Update resume with uuid " + resume.getUuid());
-            array[index] = resume;
-            isSorted = false;
-        }
+    public synchronized Resume doLoad(String uuid) {
+        return array[searchForIndex(uuid)];
     }
 
     @Override
-    public synchronized Resume load(String uuid) {
-        int index = searchById(uuid);
-
-        if (index >= 0) {
-            log.info("Loading resume with uuid " + uuid);
-            return array[index];
-        } else {
-            throw new WebAppException("Resume with " + uuid + " not exist");
-        }
-    }
-
-    @Override
-    public synchronized void delete(String uuid) {
-        int index = searchById(uuid);
-
-        if (index >= 0) {
-            log.info("Deleting resume with uuid " + uuid);
-            array[index] = null;
-            isSorted = false;
-            sort();
-
-            realSize--;
-            isActualSize = false;
-        } else {
-            throw new WebAppException("Resume with " + uuid + " not exist");
-        }
+    public synchronized void doDelete(String uuid) {
+        array[searchForIndex(uuid)] = null;
+        isSorted = false;
+        realSize--;
+        isActualSize = true;
     }
 
     @Override
     public Collection<Resume> getAllSorted() {
+        log.info("Creating new TreeSet...");
         Set<Resume> sortedCollection = new TreeSet<>(new NullSafeComparatorByName());
         sort();
-        log.info("Creating new TreeSet...");
-        for (Resume item : array) {
-            if (item != null) {
-                sortedCollection.add(item);
-            }
+        if (!isActualSize) {
+            aliveInstanceCount();
         }
+        sortedCollection.addAll(Arrays.asList(array).subList(0, realSize));
+
         return sortedCollection;
     }
 
     Resume[] getArray() {
-        log.info("Sorting by full name...");
-        Arrays.sort(array, new NullSafeComparatorByName());
         return array;
     }
 
     @Override
     public int size() {
         return realSize;
-    }
-
-
-    private static class NullSafeComparatorById implements Comparator<Resume> {
-        @Override
-        public int compare(Resume o1, Resume o2) {
-            if (o1 == null && o2 == null) {
-                return 0;
-            }
-            if (o1 == null) {
-                return 1;
-            }
-            if (o2 == null) {
-                return -1;
-            }
-            return o1.compareTo(o2);
-        }
-    }
-
-    private static class NullSafeComparatorByName implements Comparator<Resume> {
-        @Override
-        public int compare(Resume o1, Resume o2) {
-            if (o1 == null && o2 == null) {
-                return 0;
-            }
-            if (o1 == null) {
-                return 1;
-            }
-            if (o2 == null) {
-                return -1;
-            }
-            return o1.getFullName().compareTo(o2.getFullName());
-        }
     }
 }

@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class Resume implements Comparable<Resume> {
 
-    private String uuid;
+    private final String uuid;
 
     private String fullName;
 
@@ -77,26 +77,16 @@ public class Resume implements Comparable<Resume> {
 
         Resume resume = (Resume) o;
 
-        return uuid.equals(resume.uuid) && fullName.equals(resume.fullName)
-                && location.equals(resume.location)
-                && (homePage != null ? homePage.equals(resume.homePage) : resume.homePage == null)
-                && (contacts != null ? contacts.equals(resume.contacts) : resume.contacts == null)
-                && (sections != null ? sections.equals(resume.sections) : resume.sections == null);
+        return uuid.equals(resume.uuid);
     }
 
     @Override
     public int hashCode() {
-        int result = uuid.hashCode();
-        result = 31 * result + fullName.hashCode();
-        result = 31 * result + location.hashCode();
-        result = 31 * result + (homePage != null ? homePage.hashCode() : 0);
-        result = 31 * result + (contacts != null ? contacts.hashCode() : 0);
-        result = 31 * result + (sections != null ? sections.hashCode() : 0);
-        return result;
+        return uuid.hashCode();
     }
 
     @Override
-    public int compareTo(Resume o) throws NullPointerException {
+    public int compareTo(Resume o) {
         return this.getUuid().compareTo(o.getUuid());
     }
 }

@@ -12,7 +12,7 @@ import org.junit.Test;
  * 17.04.17
  */
 
-public class ArrayStorageTest {
+public class AbstractStorageTest {
 
     private static Resume r1, r2, r3;
 
@@ -29,18 +29,33 @@ public class ArrayStorageTest {
 
     private ArrayStorage arrayStorage = new ArrayStorage();
 
+    private MapStorage mapStorage = new MapStorage();
+
     @Before
     public void before() {
         arrayStorage.clear();
         arrayStorage.save(r1);
         arrayStorage.save(r2);
         arrayStorage.save(r3);
+
+        mapStorage.clear();
+        mapStorage.save(r1);
+        mapStorage.save(r2);
+        mapStorage.save(r3);
+    }
+
+    @Test
+    public void search() throws Exception {
+        System.out.println(mapStorage.search(new Resume("ghj", "", "")));
     }
 
     @Test
     public void clear() throws Exception {
         arrayStorage.clear();
         Assert.assertEquals(0, arrayStorage.size());
+
+        mapStorage.clear();
+        Assert.assertEquals(0, mapStorage.size());
     }
 
     @Test
@@ -54,29 +69,34 @@ public class ArrayStorageTest {
             }
         }
         Assert.assertEquals(4, arrayStorage.size());
+
+        mapStorage.save(new Resume("Oleh Savych 4", "None"));
+        Assert.assertEquals(4, mapStorage.size());
     }
 
     @Test
     public void update() throws Exception {
         arrayStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
         System.out.println(arrayStorage.getAllSorted().toString());
+
+        mapStorage.update(new Resume(r3.getUuid(), "Innuendo", "Earth"));
+        System.out.println(mapStorage.getAllSorted().toString());
     }
 
     @Test
     public void load() throws Exception {
         System.out.println(arrayStorage.load(r2.getUuid()));
         Assert.assertEquals("Kolomyia", arrayStorage.load(r2.getUuid()).getLocation());
+
+        System.out.println(mapStorage.load(r2.getUuid()));
+        Assert.assertEquals("Kolomyia", mapStorage.load(r2.getUuid()).getLocation());
     }
 
     @Test
     public void delete() throws Exception {
         arrayStorage.delete(r1.getUuid());
         for (Resume item: arrayStorage.getArray()) {
-            if (item != null) {
-                System.out.print(item.getFullName() + " ");
-            } else {
-                break;
-            }
+            System.out.print(item);
         }
         Assert.assertEquals(2, arrayStorage.size());
     }
@@ -91,5 +111,7 @@ public class ArrayStorageTest {
     @Test
     public void size() throws Exception {
         Assert.assertEquals(3, arrayStorage.size());
+
+        Assert.assertEquals(3, mapStorage.size());
     }
 }
