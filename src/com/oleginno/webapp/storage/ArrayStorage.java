@@ -1,6 +1,5 @@
 package com.oleginno.webapp.storage;
 
-import com.oleginno.webapp.WebAppException;
 import com.oleginno.webapp.model.Resume;
 
 import java.util.*;
@@ -10,7 +9,7 @@ import java.util.*;
  * 17.04.17
  */
 
-public class ArrayStorage extends AbstractStorage {
+public class ArrayStorage extends AbstractStorage<Integer> {
 
     private final int limit = 100;
 
@@ -41,24 +40,16 @@ public class ArrayStorage extends AbstractStorage {
         isSorted = true;
     }
 
-    private synchronized int searchForIndex(Resume resume) {
+    @Override
+    protected synchronized Integer getContext(Resume resume) {
         if (!isSorted) {
             sort();
         }
         return Arrays.binarySearch(array, resume, new NullSafeComparatorById());
     }
 
-    private synchronized int searchForIndex(String uuid) {
-        if (!isSorted) {
-            sort();
-        }
-        return Arrays.binarySearch(array,
-                new Resume(uuid, "", ""),
-                new NullSafeComparatorById());
-    }
-
     @Override
-    protected synchronized boolean search(Resume resume) {
+    protected synchronized boolean exist(Resume resume) {
         if (!isSorted) {
             sort();
         }
@@ -92,26 +83,25 @@ public class ArrayStorage extends AbstractStorage {
 
     @Override
     public synchronized void doUpdate(Resume resume) {
-        array[searchForIndex(resume)] = resume;
+        array[getContext(resume)] = resume;
         isSorted = false;
     }
 
     @Override
     public synchronized Resume doLoad(String uuid) {
-        return array[searchForIndex(uuid)];
+        return array[getContext(new Resume(uuid, null, null))];
     }
 
     @Override
     public synchronized void doDelete(String uuid) {
-        array[searchForIndex(uuid)] = null;
+        array[getContext(new Resume(uuid, null, null))] = null;
         isSorted = false;
         realSize--;
         isActualSize = true;
     }
 
     @Override
-    public Collection<Resume> getAllSorted() {
-        log.info("Creating new TreeSet...");
+    protected Collection<Resume> doGetAllSorted() {
         Set<Resume> sortedCollection = new TreeSet<>(new NullSafeComparatorByName());
         sort();
         if (!isActualSize) {

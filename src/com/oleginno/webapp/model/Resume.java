@@ -1,8 +1,6 @@
 package com.oleginno.webapp.model;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 
 public class Resume implements Comparable<Resume> {
@@ -15,7 +13,7 @@ public class Resume implements Comparable<Resume> {
 
     private String homePage;
 
-    private List<Contact> contacts = new LinkedList<>();
+    private Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
 
     private List<Section> sections = new LinkedList<>();
 
@@ -46,7 +44,7 @@ public class Resume implements Comparable<Resume> {
         return homePage;
     }
 
-    public List<Contact> getContacts() {
+    public Map<ContactType, String> getContacts() {
         return contacts;
     }
 
@@ -58,8 +56,8 @@ public class Resume implements Comparable<Resume> {
         sections.add(section);
     }
 
-    public void addContact(Contact contact) {
-        contacts.add(contact);
+    public void addContact(ContactType type, String value) {
+        contacts.put(type, value);
     }
 
     @Override

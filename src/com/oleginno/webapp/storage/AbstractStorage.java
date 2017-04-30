@@ -3,6 +3,7 @@ package com.oleginno.webapp.storage;
 import com.oleginno.webapp.WebAppException;
 import com.oleginno.webapp.model.Resume;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.logging.Logger;
 
@@ -11,17 +12,14 @@ import java.util.logging.Logger;
  * 22.04.17
  */
 
-abstract class AbstractStorage implements IStorage {
+abstract class AbstractStorage<C> implements IStorage {
 
     Logger log = Logger.getLogger(getClass().getName());
 
 
-    protected abstract boolean search(Resume resume);
+    protected abstract boolean exist(Resume resume);
 
-    private synchronized boolean searchById(String uuid) {
-        return search(new Resume(uuid, "", ""));
-    }
-
+    protected abstract C getContext(Resume resume);
 
     @Override
     public synchronized void clear() {
@@ -36,7 +34,7 @@ abstract class AbstractStorage implements IStorage {
     public synchronized void save(Resume resume) {
         log.info("Saving resume with uuid = " + resume.getUuid());
 
-        if (search(resume)) {
+        if (exist(resume)) {
             throw new WebAppException("Resume " + resume.getUuid() + " already exists", resume);
         } else {
             doSave(resume);
@@ -48,7 +46,7 @@ abstract class AbstractStorage implements IStorage {
 
     @Override
     public void update(Resume resume) {
-        if (!search(resume)) {
+        if (!exist(resume)) {
             throw new WebAppException("Resume " + resume.getUuid() + " not exist", resume);
         } else {
             log.info("Update resume with uuid " + resume.getUuid());
@@ -62,7 +60,7 @@ abstract class AbstractStorage implements IStorage {
 
     @Override
     public synchronized Resume load(String uuid) {
-        if (searchById(uuid)) {
+        if (exist(new Resume(uuid, null, null))) {
             log.info("Loading resume with uuid " + uuid);
             return doLoad(uuid);
         } else {
@@ -75,7 +73,7 @@ abstract class AbstractStorage implements IStorage {
 
     @Override
     public synchronized void delete(String uuid) {
-        if (searchById(uuid)) {
+        if (exist(new Resume(uuid, null, null))) {
             log.info("Deleting resume with uuid " + uuid);
             doDelete(uuid);
         } else {
@@ -84,6 +82,15 @@ abstract class AbstractStorage implements IStorage {
     }
 
     protected abstract void doDelete(String uuid);
+
+
+    @Override
+    public Collection<Resume> getAllSorted() {
+        log.info("Creating new TreeSet...");
+        return doGetAllSorted();
+    }
+
+    protected abstract Collection<Resume> doGetAllSorted();
 
 
     protected class NullSafeComparatorById implements Comparator<Resume> {

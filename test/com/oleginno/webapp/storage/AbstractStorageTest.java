@@ -1,6 +1,5 @@
 package com.oleginno.webapp.storage;
 
-import com.oleginno.webapp.model.Contact;
 import com.oleginno.webapp.model.ContactType;
 import com.oleginno.webapp.model.Resume;
 import org.junit.Assert;
@@ -18,13 +17,13 @@ public class AbstractStorageTest {
 
     static {
         r1 = new Resume("Oleh Savych", "Ivano-Frankivsk");
-        r1.addContact(new Contact(ContactType.MOBILE, "349032112"));
+        r1.addContact(ContactType.MOBILE, "349032112");
 
         r2 = new Resume("Oleh Savych 2", "Kolomyia");
-        r2.addContact(new Contact(ContactType.MAIL, "vert@ya.ru"));
+        r2.addContact(ContactType.MAIL, "vert@ya.ru");
 
         r3 = new Resume("Oleh Savych 3", "Sniatyn");
-        r3.addContact(new Contact(ContactType.HOME_PHONE, "2190211"));
+        r3.addContact(ContactType.HOME_PHONE, "2190211");
     }
 
     private ArrayStorage arrayStorage = new ArrayStorage();
@@ -46,7 +45,7 @@ public class AbstractStorageTest {
 
     @Test
     public void search() throws Exception {
-        System.out.println(mapStorage.search(new Resume("ghj", "", "")));
+        System.out.println(mapStorage.exist(new Resume("ghj", "", "")));
     }
 
     @Test
@@ -99,6 +98,14 @@ public class AbstractStorageTest {
             System.out.print(item);
         }
         Assert.assertEquals(2, arrayStorage.size());
+
+        System.out.println();
+
+        mapStorage.delete(r1.getUuid());
+        for (Resume item: mapStorage.getAllSorted()) {
+            System.out.print(item);
+        }
+        Assert.assertEquals(2, mapStorage.size());
     }
 
     @Test
