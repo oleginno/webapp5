@@ -15,7 +15,7 @@ public class Resume implements Comparable<Resume> {
 
     private Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
 
-    private List<Section> sections = new LinkedList<>();
+    private Map<SectionType, Section> sections = new EnumMap<>(SectionType.class);
 
 
     public Resume(String fullName, String location) {
@@ -48,12 +48,12 @@ public class Resume implements Comparable<Resume> {
         return contacts;
     }
 
-    public List<Section> getSections() {
-        return sections;
+    public Section getSection(SectionType type) {
+        return sections.get(type);
     }
 
-    public void addSection(Section section) {
-        sections.add(section);
+    public void addSection(SectionType type, Section section) {
+        sections.put(type, section);
     }
 
     public void addContact(ContactType type, String value) {

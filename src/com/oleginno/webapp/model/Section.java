@@ -6,6 +6,4 @@ package com.oleginno.webapp.model;
  */
 
 public class Section {
-
-    protected SectionType type;
 }

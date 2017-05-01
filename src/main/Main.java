@@ -1,15 +1,23 @@
 package main;
 
-import com.oleginno.webapp.model.Organization;
-import com.oleginno.webapp.storage.ArrayStorage;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayStorage temp = new ArrayStorage();
+        List<Integer> integers = new ArrayList<>();
 
-        Organization.Period op = new Organization().new Period();
+        for (int i = 0; i < 10; i++) {
+            integers.add((int)(Math.random()*11));
+        }
+
+        integers
+                .parallelStream()
+                .filter(i -> i % 2 == 0)
+                .sorted()
+                .forEachOrdered(System.out::println);
     }
 }

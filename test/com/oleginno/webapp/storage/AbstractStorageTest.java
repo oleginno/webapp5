@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * Oleh Savych
  * 17.04.17
@@ -33,6 +35,7 @@ public class AbstractStorageTest {
     @Before
     public void before() {
         arrayStorage.clear();
+        arrayStorage.save(null);
         arrayStorage.save(r1);
         arrayStorage.save(r2);
         arrayStorage.save(r3);
@@ -120,5 +123,9 @@ public class AbstractStorageTest {
         Assert.assertEquals(3, arrayStorage.size());
 
         Assert.assertEquals(3, mapStorage.size());
+
+        mapStorage.printCurrentMap();
+
+        System.out.println(Arrays.toString(arrayStorage.getArray()));
     }
 }

@@ -53,7 +53,7 @@ public class ArrayStorage extends AbstractStorage<Integer> {
         if (!isSorted) {
             sort();
         }
-        return Arrays.binarySearch(array, resume, new NullSafeComparatorById()) >= 0;
+        return getContext(resume) >= 0;
     }
 
     @Override

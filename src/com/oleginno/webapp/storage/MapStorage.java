@@ -34,7 +34,7 @@ public class MapStorage extends AbstractStorage<String> {
 
     @Override
     protected synchronized void doSave(Resume resume) {
-        map.put(resume.getUuid(), resume);
+        map.putIfAbsent(resume.getUuid(), resume);
     }
 
     @Override
@@ -63,5 +63,9 @@ public class MapStorage extends AbstractStorage<String> {
     @Override
     public int size() {
         return map.size();
+    }
+
+    synchronized void printCurrentMap() {
+        map.forEach((id, val) -> System.out.println(val));
     }
 }

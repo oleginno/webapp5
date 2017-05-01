@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 abstract class AbstractStorage<C> implements IStorage {
 
-    Logger log = Logger.getLogger(getClass().getName());
+    static Logger log = Logger.getLogger(String.valueOf(AbstractStorage.class));
 
 
     protected abstract boolean exist(Resume resume);
@@ -32,10 +32,16 @@ abstract class AbstractStorage<C> implements IStorage {
 
     @Override
     public synchronized void save(Resume resume) {
-        log.info("Saving resume with uuid = " + resume.getUuid());
+        if (resume != null) {
+            log.info("Saving resume with uuid = " + resume.getUuid());
+        } else {
+            log.info("Saving NULL!");
+        }
 
         if (exist(resume)) {
-            throw new WebAppException("Resume " + resume.getUuid() + " already exists", resume);
+            if (resume != null) {
+                throw new WebAppException("Resume " + resume.getUuid() + " already exists", resume);
+            }
         } else {
             doSave(resume);
         }
@@ -91,7 +97,6 @@ abstract class AbstractStorage<C> implements IStorage {
     }
 
     protected abstract Collection<Resume> doGetAllSorted();
-
 
     protected class NullSafeComparatorById implements Comparator<Resume> {
         @Override
