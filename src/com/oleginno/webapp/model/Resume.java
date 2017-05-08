@@ -1,9 +1,12 @@
 package com.oleginno.webapp.model;
 
+import java.io.Serializable;
 import java.util.*;
 
 
-public class Resume implements Comparable<Resume> {
+public class Resume implements Comparable<Resume>, Serializable {
+
+    static final long serialVersionUID = 1L;
 
     private final String uuid;
 
@@ -23,9 +26,9 @@ public class Resume implements Comparable<Resume> {
     }
 
     public Resume(String uuid, String fullName, String location) {
-        this.uuid = uuid;
-        this.fullName = fullName;
-        this.location = location;
+            this.uuid = uuid;
+            this.fullName = fullName;
+            this.location = location;
     }
 
     public String getUuid() {

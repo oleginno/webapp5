@@ -15,8 +15,6 @@ public class ArrayStorage extends AbstractStorage<Integer> {
 
     private Resume[] array = new Resume[limit];
 
-    private boolean isSorted = false;
-
     private int realSize = 0;
 
     private boolean isActualSize = false;
@@ -35,25 +33,25 @@ public class ArrayStorage extends AbstractStorage<Integer> {
     }
 
     private synchronized void sort() {
+        Arrays.sort(array, new NullSafeComparatorByName());
         log.info("Sorting...");
-        Arrays.sort(array, new NullSafeComparatorById());
-        isSorted = true;
     }
 
     @Override
-    protected synchronized Integer getContext(Resume resume) {
-        if (!isSorted) {
-            sort();
+    protected synchronized Integer getContext(String uuid) {
+        for (int i = 0; i < limit; i++) {
+            if (array[i] != null) {
+                if (array[i].getUuid().equals(uuid)) {
+                    return i;
+                }
+            }
         }
-        return Arrays.binarySearch(array, resume, new NullSafeComparatorById());
+        return -1;
     }
 
     @Override
-    protected synchronized boolean exist(Resume resume) {
-        if (!isSorted) {
-            sort();
-        }
-        return getContext(resume) >= 0;
+    protected synchronized boolean exist(Integer index) {
+        return index != -1;
     }
 
     @Override
@@ -66,11 +64,10 @@ public class ArrayStorage extends AbstractStorage<Integer> {
         }
         realSize = 0;
         isActualSize = false;
-        isSorted = true;
     }
 
     @Override
-    public synchronized void doSave(Resume resume) {
+    public synchronized void doSave(Integer index, Resume resume) {
         if (!isActualSize) {
             aliveInstanceCount();
         }
@@ -78,25 +75,25 @@ public class ArrayStorage extends AbstractStorage<Integer> {
             array = Arrays.copyOf(array, array.length + 32);
         }
         array[realSize++] = resume;
-        isSorted = false;
     }
 
     @Override
-    public synchronized void doUpdate(Resume resume) {
-        array[getContext(resume)] = resume;
-        isSorted = false;
+    public synchronized void doUpdate(Integer index, Resume resume) {
+        array[index] = resume;
     }
 
     @Override
-    public synchronized Resume doLoad(String uuid) {
-        return array[getContext(new Resume(uuid, null, null))];
+    public synchronized Resume doLoad(Integer index) {
+        return array[index];
     }
 
     @Override
-    public synchronized void doDelete(String uuid) {
-        array[getContext(new Resume(uuid, null, null))] = null;
-        isSorted = false;
-        realSize--;
+    public synchronized void doDelete(Integer index) {
+        int numMoved = realSize - index - 1;
+        if (numMoved > 0) {
+            System.arraycopy(array, index + 1, array, index, numMoved);
+        }
+        array[--realSize] = null;
         isActualSize = true;
     }
 

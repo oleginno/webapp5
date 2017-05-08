@@ -7,7 +7,7 @@ import java.util.List;
  * 15.04.17
  */
 
-public class MultiTextSection extends Section{
+public class MultiTextSection extends Section {
 
     private List<String> values;
 }

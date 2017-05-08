@@ -1,6 +1,7 @@
 package com.oleginno.webapp.model;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  * 15.04.17
  */
 
-public class OrganizationSection extends Section{
+public class OrganizationSection extends Section {
 
     private List<Organization> values;
 }

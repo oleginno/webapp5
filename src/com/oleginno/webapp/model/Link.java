@@ -1,11 +1,15 @@
 package com.oleginno.webapp.model;
 
+import java.io.Serializable;
+
 /**
  * Oleh Savych
  * 11.04.17
  */
 
-public class Link {
+public class Link implements Serializable {
+
+    static final long serialVersionUID = 1L;
 
     private static Link empty = new Link();
 

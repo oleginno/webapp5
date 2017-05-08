@@ -18,13 +18,13 @@ public class AbstractStorageTest {
     private static Resume r1, r2, r3;
 
     static {
-        r1 = new Resume("Oleh Savych", "Ivano-Frankivsk");
+        r1 = new Resume("qqqwwwwweeee", "Oleh Savych", "Ivano-Frankivsk");
         r1.addContact(ContactType.MOBILE, "349032112");
 
-        r2 = new Resume("Oleh Savych 2", "Kolomyia");
+        r2 = new Resume("qqqwwwwweeee222", "Oleh Savych 2", "Kolomyia");
         r2.addContact(ContactType.MAIL, "vert@ya.ru");
 
-        r3 = new Resume("Oleh Savych 3", "Sniatyn");
+        r3 = new Resume("qqqwwwwweeee333", "Oleh Savych 3", "Sniatyn");
         r3.addContact(ContactType.HOME_PHONE, "2190211");
     }
 
@@ -35,7 +35,6 @@ public class AbstractStorageTest {
     @Before
     public void before() {
         arrayStorage.clear();
-        arrayStorage.save(null);
         arrayStorage.save(r1);
         arrayStorage.save(r2);
         arrayStorage.save(r3);
@@ -48,7 +47,7 @@ public class AbstractStorageTest {
 
     @Test
     public void search() throws Exception {
-        System.out.println(mapStorage.exist(new Resume("ghj", "", "")));
+        System.out.println(mapStorage.exist("gh"));
     }
 
     @Test

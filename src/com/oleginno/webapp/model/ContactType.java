@@ -1,11 +1,13 @@
 package com.oleginno.webapp.model;
 
+import java.io.Serializable;
+
 /**
  * Oleh Savych
  * 13.04.17
  */
 
-public enum ContactType {
+public enum ContactType implements Serializable {
 
     PHONE("Тел."),
     MOBILE("Мобильный"),
@@ -13,6 +15,8 @@ public enum ContactType {
     SKYPE("Skype "),
     MAIL("Почта"),
     ICQ("ICQ");
+
+    static final long serialVersionUID = 1L;
 
     private String title;
 

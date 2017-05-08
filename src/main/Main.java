@@ -1,23 +1,27 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
 
+import com.oleginno.webapp.model.ContactType;
+import com.oleginno.webapp.model.Resume;
+import com.oleginno.webapp.storage.FileStorage;
+import com.oleginno.webapp.storage.IStorage;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Integer> integers = new ArrayList<>();
+        IStorage test = new FileStorage(FileStorage.DIR_PATH);
 
-        for (int i = 0; i < 10; i++) {
-            integers.add((int)(Math.random()*11));
-        }
+        String uuidString = "qwerty555";
+//        Resume r1 = new Resume(uuidString,"Oleh Savych999", "Ivano-Frankivsk777");
+//        r1.addContact(ContactType.MOBILE, "349032112777");
+//
+//        test.save(r1);
 
-        integers
-                .parallelStream()
-                .filter(i -> i % 2 == 0)
-                .sorted()
-                .forEachOrdered(System.out::println);
+//        Resume readed = test.load(uuidString);
+//        System.out.println(readed.getFullName());
+
+        //test.clear();
+        System.out.println(test.getAllSorted());
     }
 }

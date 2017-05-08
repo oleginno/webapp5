@@ -14,17 +14,14 @@ public class MapStorage extends AbstractStorage<String> {
     private Map<String, Resume> map = new HashMap<>(32);
 
     @Override
-    protected synchronized boolean exist(Resume resume) {
+    protected synchronized boolean exist(String uuid) {
         log.info("Searching resume in the HashMap...");
-        return map.containsKey(resume.getUuid());
+        return map.containsKey(uuid);
     }
 
     @Override
-    protected synchronized String getContext(Resume resume) {
-        if(exist(resume)) {
-            return resume.getUuid();
-        }
-        return null;
+    protected synchronized String getContext(String uuid) {
+        return uuid;
     }
 
     @Override
@@ -33,13 +30,13 @@ public class MapStorage extends AbstractStorage<String> {
     }
 
     @Override
-    protected synchronized void doSave(Resume resume) {
-        map.putIfAbsent(resume.getUuid(), resume);
+    protected synchronized void doSave(String uuid, Resume resume) {
+        map.putIfAbsent(uuid, resume);
     }
 
     @Override
-    protected synchronized void doUpdate(Resume resume) {
-        map.replace(resume.getUuid(), resume);
+    protected synchronized void doUpdate(String uuid, Resume resume) {
+        map.replace(uuid, resume);
     }
 
     @Override
@@ -66,6 +63,6 @@ public class MapStorage extends AbstractStorage<String> {
     }
 
     synchronized void printCurrentMap() {
-        map.forEach((id, val) -> System.out.println(val));
+        map.forEach((k, v) -> System.out.println(v));
     }
 }
