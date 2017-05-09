@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="738c7425-c951-45ca-8486-b734b0e50446" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/AbstractStorage.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/AbstractStorage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" afterPath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,34 +49,22 @@
       <file leaf-file-name="FileStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="44" />
+            <state relative-caret-position="128">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1154#1155#0" expanded="true" />
-                <element signature="e#1207#1208#0" expanded="true" />
-                <element signature="e#1266#1267#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
-                <element signature="e#2023#2024#0" expanded="true" />
-                <element signature="e#2058#2059#0" expanded="true" />
-                <element signature="e#2780#2781#0" expanded="true" />
-                <element signature="e#2823#2824#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractStorageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/AbstractStorageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1200#1201#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1483#1484#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#2016#2017#0" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
+                <element signature="e#2773#2774#0" expanded="true" />
+                <element signature="e#2816#2817#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +73,8 @@
       <file leaf-file-name="FileStorageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="1084">
+              <caret line="76" column="43" lean-forward="true" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,9 +158,9 @@
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/MultiTextSection.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Link.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/AbstractStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java" />
         <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
   </component>
@@ -994,10 +980,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.FileStorageTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FileStorageTest.exist" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FileStorageTest.getContext" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FileStorageTest.doLoad" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FileStorageTest.doUpdate" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileStorageTest.doUpdate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FileStorageTest.exist" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileStorageTest.getContext" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FileStorageTest.doLoad" />
       </list>
     </recent_temporary>
   </component>
@@ -1053,7 +1039,7 @@
       <workItem from="1494023499342" duration="2954000" />
       <workItem from="1494145329887" duration="864000" />
       <workItem from="1494259608404" duration="12384000" />
-      <workItem from="1494348582886" duration="3800000" />
+      <workItem from="1494348582886" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1491169590505</created>
@@ -1202,7 +1188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494277555778</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="FileStorageTest implemented">
+      <created>1494354173021</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1494354173021</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1212,11 +1205,11 @@
     <history-entry file="FileStorageTest - 2017.05.09 at 21h 05m 24s.xml">
       <configuration name="FileStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileStorageTest_doDelete - 2017.05.09 at 20h 54m 33s.xml">
-      <configuration name="FileStorageTest.doDelete" configurationId="JUnit" />
+    <history-entry file="FileStorageTest - 2017.05.09 at 21h 26m 40s.xml">
+      <configuration name="FileStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileStorageTest_doDelete - 2017.05.09 at 20h 55m 48s.xml">
-      <configuration name="FileStorageTest.doDelete" configurationId="JUnit" />
+    <history-entry file="FileStorageTest - 2017.05.09 at 21h 26m 45s.xml">
+      <configuration name="FileStorageTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FileStorageTest_doLoad - 2017.05.09 at 21h 02m 41s.xml">
       <configuration name="FileStorageTest.doLoad" configurationId="JUnit" />
@@ -1224,10 +1217,10 @@
     <history-entry file="FileStorageTest_doLoad - 2017.05.09 at 21h 03m 13s.xml">
       <configuration name="FileStorageTest.doLoad" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileStorageTest_doUpdate - 2017.05.09 at 20h 57m 46s.xml">
+    <history-entry file="FileStorageTest_doUpdate - 2017.05.09 at 21h 01m 09s.xml">
       <configuration name="FileStorageTest.doUpdate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileStorageTest_doUpdate - 2017.05.09 at 21h 01m 09s.xml">
+    <history-entry file="FileStorageTest_doUpdate - 2017.05.09 at 21h 26m 22s.xml">
       <configuration name="FileStorageTest.doUpdate" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FileStorageTest_exist - 2017.05.09 at 21h 04m 13s.xml">
@@ -1238,7 +1231,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126967000" />
+    <option name="totallyTimeSpent" value="127203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1348,7 +1341,8 @@
     <MESSAGE value="MapStorage changed&#10;AbstractStorage changed&#10;ArrayStorage changed&#10;Refactored" />
     <MESSAGE value="some changes in package &quot;storage&quot;" />
     <MESSAGE value="FileStorage added" />
-    <option name="LAST_COMMIT_MESSAGE" value="FileStorage added" />
+    <MESSAGE value="FileStorageTest implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="FileStorageTest implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1636,44 +1630,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/AbstractStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/AbstractStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="88" column="40" lean-forward="true" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1686,10 +1648,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/AbstractStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#2016#2017#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2816#2817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state relative-caret-position="1084">
+          <caret line="76" column="43" lean-forward="true" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

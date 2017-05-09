@@ -33,7 +33,7 @@ public class FileStorageTest {
 
         f4 = new Resume("Anonimus", "earth");
 
-        fileStorage = new FileStorage("./file_storage");
+        fileStorage = new FileStorage(FileStorage.DIR_PATH);
 
         fileStorage.save(f1);
         fileStorage.save(f2);
@@ -69,7 +69,7 @@ public class FileStorageTest {
 
     @Test
     public void doUpdate() throws Exception {
-        fileStorage.doUpdate(new File("./file_storage/" + "/" + f3.getUuid()), f4);
+        fileStorage.doUpdate(new File(FileStorage.DIR_PATH, f3.getUuid()), f4);
         fileStorage.getAllSorted().forEach(System.out::println);
     }
 

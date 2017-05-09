@@ -42,7 +42,7 @@ public class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected File getContext(String fileName) {
-        return new File(dir + "/" + fileName);
+        return new File(dir, fileName);
     }
 
     @Override
