@@ -36,7 +36,7 @@ public class FileStorage extends AbstractStorage<File> {
     }
 
     @Override
-    protected boolean exist(File file) {
+    protected synchronized boolean exist(File file) {
         return Arrays.stream(getAllFiles()).anyMatch(e -> e.equals(file));
     }
 
@@ -46,11 +46,11 @@ public class FileStorage extends AbstractStorage<File> {
     }
 
     @Override
-    protected void doClear() {
+    protected synchronized void doClear() {
         Arrays.stream(getAllFiles()).forEach(this::doDelete);
     }
 
-    private File[] getAllFiles() {
+    private synchronized File[] getAllFiles() {
         return dir.listFiles();
     }
 
@@ -59,7 +59,7 @@ public class FileStorage extends AbstractStorage<File> {
         write(file, resume);
     }
 
-    private void write(File file, Resume resume) {
+    private synchronized void write(File file, Resume resume) {
         try (OutputStream os = new FileOutputStream(file);
              ObjectOutputStream oos = new ObjectOutputStream(os)) {
 
@@ -78,7 +78,7 @@ public class FileStorage extends AbstractStorage<File> {
     }
 
     @Override
-    protected Resume doLoad(File file) {
+    protected synchronized Resume doLoad(File file) {
         try (InputStream is = new FileInputStream(file);
              ObjectInputStream ois = new ObjectInputStream(is)) {
 
@@ -91,7 +91,7 @@ public class FileStorage extends AbstractStorage<File> {
     }
 
     @Override
-    protected void doDelete(File file) {
+    protected synchronized void doDelete(File file) {
         if (!file.delete()) {
             throw new WebAppException("File " + file.getAbsolutePath()
                     + " can not be deleted");
@@ -99,12 +99,12 @@ public class FileStorage extends AbstractStorage<File> {
     }
 
     @Override
-    public int size() {
+    public synchronized int size() {
         return getAllFiles().length;
     }
 
     @Override
-    protected Collection<Resume> doGetAllSorted() {
+    protected synchronized Collection<Resume> doGetAllSorted() {
         Set<Resume> set = new TreeSet<>();
         for (File file : getAllFiles()) {
             set.add(doLoad(file));

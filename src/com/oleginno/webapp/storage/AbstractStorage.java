@@ -92,21 +92,6 @@ abstract class AbstractStorage<C> implements IStorage {
 
     protected abstract Collection<Resume> doGetAllSorted();
 
-//    protected class NullSafeComparatorById implements Comparator<Resume> {
-//        @Override
-//        public int compare(Resume o1, Resume o2) {
-//            if (o1 == null && o2 == null) {
-//                return 0;
-//            }
-//            if (o1 == null) {
-//                return 1;
-//            }
-//            if (o2 == null) {
-//                return -1;
-//            }
-//            return o1.compareTo(o2);
-//        }
-//    }
 
     protected class NullSafeComparatorByName implements Comparator<Resume> {
         @Override
