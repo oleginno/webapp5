@@ -1,14 +1,16 @@
 package com.oleginno.webapp.model;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.UUID;
 
 
 public class Resume implements Comparable<Resume>, Serializable {
 
     static final long serialVersionUID = 1L;
 
-    private final String uuid;
+    private String uuid;
 
     private String fullName;
 
@@ -59,6 +61,19 @@ public class Resume implements Comparable<Resume>, Serializable {
         sections.put(type, section);
     }
 
+    public void addObjective(String value) {
+        addSection(SectionType.OBJECTIVE, new TextSection(value));
+    }
+
+    public void addMultiTextSection(SectionType type, String... values) {
+        addSection(type, new MultiTextSection(values));
+    }
+
+    public void addOrganizationSection(SectionType type, Organization... organizations) {
+        addSection(type, new OrganizationSection(organizations));
+    }
+
+
     public void addContact(ContactType type, String value) {
         contacts.put(type, value);
     }
@@ -78,12 +93,14 @@ public class Resume implements Comparable<Resume>, Serializable {
 
         Resume resume = (Resume) o;
 
-        return uuid.equals(resume.uuid);
+        return uuid.equals(resume.uuid) && fullName.equals(resume.fullName);
     }
 
     @Override
     public int hashCode() {
-        return uuid.hashCode();
+        int result = uuid.hashCode();
+        result = 31 * result + fullName.hashCode();
+        return result;
     }
 
     @Override

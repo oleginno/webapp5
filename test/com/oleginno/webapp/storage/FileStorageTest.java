@@ -2,6 +2,8 @@ package com.oleginno.webapp.storage;
 
 import com.oleginno.webapp.model.ContactType;
 import com.oleginno.webapp.model.Resume;
+import com.oleginno.webapp.model.SectionType;
+import com.oleginno.webapp.model.TextSection;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,9 +26,11 @@ public class FileStorageTest {
     public void setUp() throws Exception {
         f1 = new Resume("Oleh Savych", "Ivano-Frankivsk");
         f1.addContact(ContactType.PHONE, "12345678910");
+        f1.addMultiTextSection(SectionType.EDUCATION, "Section about education");
 
         f2 = new Resume("Ivan Savych", "Kyiv");
         f2.addContact(ContactType.MAIL, "johhny@ya.ru");
+        f2.addSection(SectionType.ACHIEVEMENT, new TextSection("Certified Java 6 Programmer"));
 
         f3 = new Resume("Vasyl Savych", "Sniatyn");
         f3.addContact(ContactType.MOBILE, "545533211212");
@@ -75,7 +79,7 @@ public class FileStorageTest {
 
     @Test
     public void doLoad() throws Exception {
-        System.out.println(fileStorage.load(f2.getUuid()).getFullName().toUpperCase());
+        System.out.println(fileStorage.load(f2.getUuid()).getSection(SectionType.ACHIEVEMENT));
     }
 
     @Test

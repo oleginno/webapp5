@@ -105,7 +105,7 @@ public class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected synchronized Collection<Resume> doGetAllSorted() {
-        Set<Resume> set = new TreeSet<>();
+        Set<Resume> set = new TreeSet<>(new NullSafeComparatorByName());
         for (File file : getAllFiles()) {
             set.add(doLoad(file));
         }
