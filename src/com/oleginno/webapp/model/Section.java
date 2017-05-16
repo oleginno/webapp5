@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Section implements Serializable {
+class Section implements Serializable {
 
     static final long serialVersionUID = 1L;
 }

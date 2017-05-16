@@ -8,8 +8,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Collection;
@@ -21,13 +19,13 @@ import java.util.TreeSet;
  * 03.05.17
  */
 
-public class FileStorage extends AbstractStorage<File> {
+public abstract class FileStorage extends AbstractStorage<File> {
 
     private File dir;
 
-    public static final String DIR_PATH = "/Users/oleg/Documents/webapp5/file_storage/";
+    static final String DIR_PATH = "/Users/oleg/Documents/webapp5/file_storage/";
 
-    public FileStorage(String path) {
+    FileStorage(String path) {
         this.dir = new File(path);
         if (!dir.isDirectory() || !dir.canWrite()) {
             throw new IllegalArgumentException("'" + path + "'"
@@ -56,21 +54,35 @@ public class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected void doSave(File file, Resume resume) {
+        try {
+            if(!file.createNewFile()){
+                throw new WebAppException("Couldn't create file " + file.getAbsolutePath(), resume);
+            }
+        } catch (IOException e) {
+            throw new WebAppException("Couldn't create file " + file.getAbsolutePath(), resume, e);
+        }
         write(file, resume);
     }
 
-    private synchronized void write(File file, Resume resume) {
-        try (OutputStream os = new FileOutputStream(file);
-             ObjectOutputStream oos = new ObjectOutputStream(os)) {
-
-            oos.writeObject(resume);
-            oos.flush();
-
+    protected void write(File file, Resume r) {
+        try {
+            write(new FileOutputStream(file), r);
         } catch (IOException e) {
-            throw new WebAppException("Could not create file "
-                    + file.getAbsolutePath(), resume, e);
+            throw new WebAppException("Couldn't write file " + file.getAbsolutePath(), r, e);
         }
     }
+
+    protected Resume read(File file) {
+        try {
+            return read(new FileInputStream(file));
+        } catch (IOException e) {
+            throw new WebAppException("Couldn't read file " + file.getAbsolutePath(), e);
+        }
+    }
+
+    abstract protected void write(OutputStream os, Resume r) throws IOException;
+
+    abstract protected Resume read(InputStream is) throws IOException;
 
     @Override
     protected void doUpdate(File file, Resume resume) {
@@ -79,15 +91,7 @@ public class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected synchronized Resume doLoad(File file) {
-        try (InputStream is = new FileInputStream(file);
-             ObjectInputStream ois = new ObjectInputStream(is)) {
-
-            return (Resume) ois.readObject();
-
-        } catch (IOException | ClassNotFoundException e) {
-            throw new WebAppException("Could not read resume from file "
-                    + file.getAbsolutePath(), e);
-        }
+        return read(file);
     }
 
     @Override

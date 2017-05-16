@@ -1,7 +1,9 @@
 package com.oleginno.webapp.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -9,6 +11,7 @@ import java.util.List;
  * 13.04.17
  */
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Organization  implements Serializable {
 
     static final long serialVersionUID = 1L;
@@ -17,18 +20,34 @@ public class Organization  implements Serializable {
 
     private List<Period> periods;
 
+    public Organization(Link link, List<Period> periods) {
+        this.link = link;
+        this.periods = periods;
+    }
 
-    public class Period {
+    public Organization() {
+    }
 
-        private Date startDate;
+    public class Period implements Serializable {
 
-        private Date endDate;
+        static final long serialVersionUID = 1L;
+
+        private LocalDate startDate;
+
+        private LocalDate endDate;
 
         private String position;
 
         private String content;
 
-        public Period(Date startDate, Date endDate) {
+        public Period(LocalDate startDate, LocalDate endDate, String position, String content) {
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.position = position;
+            this.content = content;
+        }
+
+        public Period(LocalDate startDate, LocalDate endDate) {
             this.startDate = startDate;
             this.endDate = endDate;
         }

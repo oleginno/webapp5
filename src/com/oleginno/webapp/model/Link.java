@@ -1,5 +1,7 @@
 package com.oleginno.webapp.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
 
 /**
@@ -7,6 +9,7 @@ import java.io.Serializable;
  * 11.04.17
  */
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Link implements Serializable {
 
     static final long serialVersionUID = 1L;
