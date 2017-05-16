@@ -38,12 +38,19 @@ public class Resume implements Comparable<Resume>, Serializable {
             this.location = location;
     }
 
+    private Resume() {
+    }
+
     public String getUuid() {
         return uuid;
     }
 
     public String getFullName() {
         return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getLocation() {

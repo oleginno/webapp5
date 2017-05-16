@@ -28,9 +28,11 @@ public class Organization  implements Serializable {
     public Organization() {
     }
 
-    public class Period implements Serializable {
+    public static class Period implements Serializable {
 
         static final long serialVersionUID = 1L;
+
+        public static final LocalDate NOW = LocalDate.of(3000, 1, 1);
 
         private LocalDate startDate;
 
