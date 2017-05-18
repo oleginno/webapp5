@@ -56,7 +56,7 @@ abstract public class CoreAbstractStorageTest {
 //                        new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "student", "IT facultet")),
 //                new Organization("Organization12", "http://Organization12.ru"));
 
-        //storage.clear();
+        storage.clear();
         storage.save(R3);
         storage.save(R1);
         storage.save(R2);
@@ -64,7 +64,7 @@ abstract public class CoreAbstractStorageTest {
 
     @After
     public void tearDown() throws Exception {
-        storage.clear();
+        //storage.clear();
     }
 
     @Test
@@ -82,8 +82,7 @@ abstract public class CoreAbstractStorageTest {
 
     @Test
     public void testLoad() throws Exception {
-        Resume load = storage.load(R1.getUuid());
-        Assert.assertEquals(R1, load);
+        Assert.assertEquals(R1, storage.load(R1.getUuid()));
         Assert.assertEquals(R2, storage.load(R2.getUuid()));
         Assert.assertEquals(R3, storage.load(R3.getUuid()));
     }
@@ -101,9 +100,6 @@ abstract public class CoreAbstractStorageTest {
 
     @Test
     public void testGetAllSorted() throws Exception {
-//        Resume[] src = new Resume[]{R1, R2, R3};
-//        Arrays.sort(src);
-//        Assert.assertArrayEquals(src, storage.getAllSorted().toArray());
         List<Resume> list = Arrays.asList(R1, R2, R3);
         list.sort((o1, o2) -> 0);
         Assert.assertEquals(list, new ArrayList<>(storage.getAllSorted()));
