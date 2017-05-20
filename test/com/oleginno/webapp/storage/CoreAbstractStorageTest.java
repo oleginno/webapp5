@@ -1,10 +1,7 @@
 package com.oleginno.webapp.storage;
 
 import com.oleginno.webapp.WebAppException;
-import com.oleginno.webapp.model.ContactType;
-import com.oleginno.webapp.model.Organization;
-import com.oleginno.webapp.model.Resume;
-import com.oleginno.webapp.model.SectionType;
+import com.oleginno.webapp.model.*;
 import org.junit.*;
 
 import java.time.LocalDate;
@@ -44,17 +41,20 @@ abstract public class CoreAbstractStorageTest {
         R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achivment11", "Achivment12");
         R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
 
-//        R1.addOrganizationSection(SectionType.EXPERIENCE,
-//                new Organization("Organization11", null,
-//                        new Organization.Period(LocalDate.of(2005, Month.JANUARY, 1),
-//                                Organization.Period.NOW,
-//                                "position1", "content1"),
-//                        new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")));
-//        R1.addOrganizationSection(SectionType.EDUCATION,
-//                new Organization("Institute", null,
-//                        new Organization.Period(1996, Month.JANUARY, 2000, Month.DECEMBER, "aspirant", null),
-//                        new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "student", "IT facultet")),
-//                new Organization("Organization12", "http://Organization12.ru"));
+        R1.addOrganizationSection(SectionType.EXPERIENCE,
+                new Organization("Organization11", null,
+                        new Organization.Period(LocalDate.of(2005, Month.JANUARY, 1),
+                                Organization.Period.NOW, "position1", "content1"),
+                        new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY,
+                                "position2", "content2")));
+
+        R1.addOrganizationSection(SectionType.EDUCATION,
+                new Organization("Institute", null,
+                        new Organization.Period(1996, Month.JANUARY, 2000, Month.DECEMBER,
+                                "aspirant", null),
+                        new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY,
+                                "student", "IT facultet")),
+                new Organization("Organization12", "http://Organization12.ru"));
 
         storage.clear();
         storage.save(R3);
@@ -85,6 +85,24 @@ abstract public class CoreAbstractStorageTest {
         Assert.assertEquals(R1, storage.load(R1.getUuid()));
         Assert.assertEquals(R2, storage.load(R2.getUuid()));
         Assert.assertEquals(R3, storage.load(R3.getUuid()));
+//        OrganizationSection section = (OrganizationSection) R1.getSection(SectionType.EDUCATION);
+//        for (Organization organization: section.getValues()) {
+//            for (Organization.Period period: organization.getPeriods()) {
+//                System.out.println(period.getStartDate());
+//                System.out.println(period.getEndDate());
+//                System.out.println(period.getPosition());
+//                System.out.println(period.getContent());
+//            }
+//        }
+//        OrganizationSection section2 = (OrganizationSection) R1.getSection(SectionType.EXPERIENCE);
+//        for (Organization organization2: section2.getValues()) {
+//            for (Organization.Period period2: organization2.getPeriods()) {
+//                System.out.println(period2.getStartDate());
+//                System.out.println(period2.getEndDate());
+//                System.out.println(period2.getPosition());
+//                System.out.println(period2.getContent());
+//            }
+//        }
     }
 
     @Test(expected = WebAppException.class)
