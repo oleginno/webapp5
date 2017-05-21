@@ -3,6 +3,12 @@
     <output-path>$PROJECT_DIR$/out/artifacts/webapp5_Web</output-path>
     <root id="archive" name="webapp5_Web.war">
       <element id="artifact" artifact-name="webapp5:Web exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.servlet.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

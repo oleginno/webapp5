@@ -9,6 +9,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/../Практика Java/gson-2.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.servlet.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" />
         </element>
       </element>
     </root>
