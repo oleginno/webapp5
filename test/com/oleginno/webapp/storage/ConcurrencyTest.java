@@ -33,7 +33,7 @@ public class ConcurrencyTest {
     }
 
     private void run(IStorage storage) throws Exception {
-        for (int i = 1; i < 2000; i++) {
+        for (int i = 1; i < 2700; i++) {
             new Thread(() -> {
                 Resume r = new Resume("name", "location");
                 storage.save(r);
