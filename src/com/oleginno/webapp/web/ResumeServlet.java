@@ -23,7 +23,8 @@ public class ResumeServlet extends javax.servlet.http.HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
         Writer w = response.getWriter();
-        w.write("Тест сервелет: привет");
+        String name = request.getParameter("name");
+        w.write("Тест сервелет: привет " + name);
         w.close();
     }
 }
