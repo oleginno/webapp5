@@ -14,7 +14,7 @@ public class Link implements Serializable {
 
     static final long serialVersionUID = 1L;
 
-    private static Link empty = new Link();
+    public static Link EMPTY = new Link();
 
     private final String name;
 
@@ -36,7 +36,15 @@ public class Link implements Serializable {
     }
 
     public Link empty() {
-        return empty;
+        return EMPTY;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     @Override

@@ -27,6 +27,11 @@ public class Resume implements Comparable<Resume>, Serializable {
 
     private Map<SectionType, Section> sections = new EnumMap<>(SectionType.class);
 
+    public static final Resume EMPTY;
+
+    static {
+        EMPTY = new Resume();
+    }
 
     public Resume(String fullName, String location) {
         this(UUID.randomUUID().toString(), fullName, location);
@@ -57,12 +62,24 @@ public class Resume implements Comparable<Resume>, Serializable {
         return location;
     }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     public String getHomePage() {
         return homePage;
     }
 
+    public void setHomePage(String homePage) {
+        this.homePage = homePage;
+    }
+
     public Map<ContactType, String> getContacts() {
         return contacts;
+    }
+
+    public Map<SectionType, Section> getSections() {
+        return sections;
     }
 
     public Section getSection(SectionType type) {
@@ -81,13 +98,20 @@ public class Resume implements Comparable<Resume>, Serializable {
         addSection(type, new MultiTextSection(values));
     }
 
+    public String getContact(ContactType type) {
+        return contacts.get(type);
+    }
+
     public void addOrganizationSection(SectionType type, Organization... organizations) {
         addSection(type, new OrganizationSection(organizations));
     }
 
-
     public void addContact(ContactType type, String value) {
         contacts.put(type, value);
+    }
+
+    public void removeContact(ContactType type) {
+        contacts.remove(type);
     }
 
     @Override
