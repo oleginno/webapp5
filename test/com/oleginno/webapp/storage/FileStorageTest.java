@@ -37,7 +37,7 @@ public class FileStorageTest {
 
         f4 = new Resume("Anonimus", "earth");
 
-        fileStorage = new SerializeFileStorage(FileStorage.DIR_PATH);
+        //fileStorage = new SerializeFileStorage(FileStorage.DIR_PATH);
 
         fileStorage.save(f1);
         fileStorage.save(f2);

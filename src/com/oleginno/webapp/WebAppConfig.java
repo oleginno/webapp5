@@ -1,7 +1,7 @@
 package com.oleginno.webapp;
 
 import com.oleginno.webapp.storage.IStorage;
-import com.oleginno.webapp.storage.XmlFileStorage;
+import com.oleginno.webapp.storage.SqlStorage;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -32,16 +32,15 @@ public class WebAppConfig {
 
             LogManager.getLogManager().readConfiguration(is);
 
-            //storage = new XmlFileStorage("/Users/oleg/Documents/webapp5/file_storage/");
             Properties appProps = new Properties();
             appProps.load(webAppIs);
 
-            storage = new XmlFileStorage(appProps.getProperty("storage.dir"));
-//            storage = new SqlStorage(
-//                    appProps.getProperty("db.url"),
-//                    appProps.getProperty("db.user"),
-//                    appProps.getProperty("db.password")
-//            );
+            //storage = new XmlFileStorage(appProps.getProperty("storage.dir"));
+            storage = new SqlStorage(
+                    appProps.getProperty("db.url"),
+                    appProps.getProperty("db.user"),
+                    appProps.getProperty("db.password")
+            );
         } catch (Exception e) {
             throw new IllegalStateException(e);
         }

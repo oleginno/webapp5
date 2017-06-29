@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 
 
@@ -41,6 +42,16 @@ public class Resume implements Comparable<Resume>, Serializable {
             this.uuid = uuid;
             this.fullName = fullName;
             this.location = location;
+    }
+
+    public Resume(String uuid, String fullName, String location, String homePage) {
+        Objects.requireNonNull(uuid, "uuid is null");
+        Objects.requireNonNull(fullName, "fullName is null");
+        Objects.requireNonNull(location, "location is null");
+        this.uuid = uuid;
+        this.fullName = fullName;
+        this.location = location;
+        this.homePage = homePage;
     }
 
     private Resume() {

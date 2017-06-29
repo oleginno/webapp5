@@ -64,7 +64,9 @@ public class Organization implements Serializable {
         }
 
         public Period(int startYear, Month startMonth, int endYear, Month endMonth, String position, String content) {
-            this(LocalDate.of(startYear, startMonth, 1), LocalDate.of(endYear, endMonth, 1), position, content);
+            this(LocalDate.of(startYear, startMonth, 1),
+                    LocalDate.of(endYear, endMonth, 1),
+                    position, content);
         }
 
         public Period(LocalDate startDate, LocalDate endDate, String position, String content) {

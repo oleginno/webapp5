@@ -8,41 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="738c7425-c951-45ca-8486-b734b0e50446" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/email.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/pdf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/pencil.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/s.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/skype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/util/Util.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/web/HtmlUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/web/SectionHtmlType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logging.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/webapp.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/edit.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/footer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/fragments/header.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/list.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/view.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/webapp5_Web.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/webapp5_Web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/webapp5_Web_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/webapp5_Web_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/sql/ConnectionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/sql/Sql.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/sql/SqlExecutor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/sql/SqlTransaction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/SqlStorageTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SerializeFileStorage.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/ContactType.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/ContactType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Link.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Link.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/OrganizationSection.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/OrganizationSection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Section.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/Section.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/model/SectionType.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/model/SectionType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/web/ResumeServlet.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/web/ResumeServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java" afterPath="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java" afterPath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" afterPath="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp5.iml" afterPath="$PROJECT_DIR$/webapp5.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -118,6 +96,10 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="string_section" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -140,62 +122,39 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="contact" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Resume.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2709#2710#0" expanded="true" />
-                <element signature="e#2746#2747#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WebAppConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResumeServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/web/ResumeServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webapp.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webapp.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlStorage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="145" column="45" lean-forward="false" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+              <folding>
+                <element signature="e#800#801#0" expanded="false" />
+                <element signature="e#849#850#0" expanded="false" />
+                <marker date="1498499395000" expanded="true" signature="1042:1115" ph="INSERT INTO resume... " />
+                <marker date="1498499395000" expanded="true" signature="1604:1671" ph="UPDATE resum... " />
+                <marker date="1498499395000" expanded="true" signature="2225:2432" ph="SELECT *\n F... resume" />
+                <marker date="1498499395000" expanded="true" signature="3162:3193" ph="DELETE FROM " />
+                <marker date="1498499395000" expanded="true" signature="3527:3620" ph="SELECT * FRO... resume" />
+                <marker date="1498499395000" expanded="true" signature="4423:4450" ph="SELECT count... resume" />
+                <marker date="1498499395000" expanded="true" signature="5024:5085" ph="INSERT INTO contact... " />
+                <marker date="1498499395000" expanded="true" signature="5552:5591" ph="DELETE FROM " />
+                <marker date="1498499395000" expanded="true" signature="5765:5819" ph="INSERT INTO period... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,8 +170,8 @@
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="jsf" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -230,18 +189,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/MapStorageTest.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/Temp.java" />
-        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/AbstractStorageTest.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/ArrayStorage.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/TextSection.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/MultiTextSection.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/XmlStorage.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/AbstractStorage.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/IStorage.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SerializeFileStorage.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java" />
-        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/XmlFileStorage.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/util/XmlParser.java" />
         <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/XmlFileStorageTest.java" />
@@ -250,7 +201,6 @@
         <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/JsonFileStorageTest.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/util/LocalDateAdapter.java" />
-        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/MapStorage.java" />
         <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/ConcurrencyTest.java" />
         <option value="$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletRequest.class" />
@@ -259,7 +209,6 @@
         <option value="$PROJECT_DIR$/web/test.html" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Section.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/OrganizationSection.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Link.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/web/HtmlUtil.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/ContactType.java" />
@@ -274,15 +223,28 @@
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/SectionType.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/web/SectionHtmlType.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/web/ResumeServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/edit.jsp" />
         <option value="dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.resume" />
-        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java" />
         <option value="$PROJECT_DIR$/src/webapp.properties" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/sql/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/sql/SqlExecutor.java" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SerializeFileStorage.java" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/IStorage.java" />
+        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java" />
+        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/SqlStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/edit.jsp" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/sql/Sql.java" />
+        <option value="$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java" />
+        <option value="dbsequence:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.string_section_id_seq" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java" />
+        <option value="$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java" />
       </list>
     </option>
+  </component>
+  <component name="JavaeeView">
+    <option name="showModules" value="false" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -296,6 +258,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1920" />
@@ -335,6 +300,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,6 +436,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oleginno" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -647,7 +643,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oleginno" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file_storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,7 +785,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -774,11 +813,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/oleginno/webapp" />
       <recent name="$PROJECT_DIR$/src/com/oleginno/webapp/storage" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/com/oleginno/webapp/util" />
       <recent name="$PROJECT_DIR$/src/com/oleginno/webapp/web" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -793,8 +832,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration default="false" name="ConcurrencyTest.testSynchronizedMapStorage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SqlStorageTest">
+    <configuration default="false" name="SqlStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.oleginno.webapp.storage.*" />
@@ -805,9 +844,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.oleginno.webapp.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.ConcurrencyTest" />
-      <option name="METHOD_NAME" value="testSynchronizedMapStorage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.SqlStorageTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -820,7 +859,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ConcurrencyTest.testArrayStorage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FileStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.oleginno.webapp.storage.*" />
@@ -831,9 +870,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.oleginno.webapp.storage" />
-      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.ConcurrencyTest" />
-      <option name="METHOD_NAME" value="testArrayStorage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.FileStorageTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -846,24 +885,30 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FileStorageTest.exist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="com.oleginno.webapp.storage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="webapp5" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="com.oleginno.webapp.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.FileStorageTest" />
+      <option name="METHOD_NAME" value="exist" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="webapp5" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="false" name="XmlFileStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -892,44 +937,31 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="list.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M21" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/jsp/list.jsp" />
-      <deployment>
-        <artifact name="webapp5:Web">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="list_jsp_webapp5" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="webapp5:Web" />
-        </option>
-      </method>
+    <configuration default="false" name="JsonFileStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.oleginno.webapp.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webapp5" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.oleginno.webapp.storage" />
+      <option name="MAIN_CLASS_NAME" value="com.oleginno.webapp.storage.JsonFileStorageTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
@@ -1432,19 +1464,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Remote.Tomcat_remote" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ConcurrencyTest.testSynchronizedMapStorage" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ConcurrencyTest.testArrayStorage" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SqlStorageTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FileStorageTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FileStorageTest.exist" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.XmlFileStorageTest" />
-      <item index="6" class="java.lang.String" itemvalue="Tomcat Server.list.jsp" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.JsonFileStorageTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.list.jsp" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SqlStorageTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JsonFileStorageTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.XmlFileStorageTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ConcurrencyTest.testSynchronizedMapStorage" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ConcurrencyTest.testArrayStorage" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileStorageTest.exist" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FileStorageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1530,7 +1562,13 @@
       <workItem from="1497807811439" duration="4015000" />
       <workItem from="1497858800851" duration="20000" />
       <workItem from="1497895411824" duration="4018000" />
-      <workItem from="1498152383164" duration="1018000" />
+      <workItem from="1498152383164" duration="4787000" />
+      <workItem from="1498160561930" duration="1183000" />
+      <workItem from="1498378959458" duration="182000" />
+      <workItem from="1498405840623" duration="1914000" />
+      <workItem from="1498497412183" duration="1455000" />
+      <workItem from="1498659258200" duration="120000" />
+      <workItem from="1498748565290" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1491169590505</created>
@@ -1763,43 +1801,50 @@
       <option name="project" value="LOCAL" />
       <updated>1495557619479</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="DB PostgreSQL connected&#10;Some other changes (many!)">
+      <created>1498153776187</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1498153776187</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 24m 28s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="JsonFileStorageTest - 2017.06.26 at 20h 17m 33s.xml">
+      <configuration name="JsonFileStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 24m 33s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.22 at 22h 52m 15s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 24m 38s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.22 at 22h 54m 23s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 24m 42s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.22 at 22h 55m 51s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 24m 47s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.22 at 22h 59m 58s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 26m 46s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.26 at 20h 24m 04s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 27m 02s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest - 2017.06.26 at 20h 25m 34s.xml">
+      <configuration name="SqlStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConcurrencyTest_testSynchronizedMapStorage - 2017.05.20 at 23h 27m 09s.xml">
-      <configuration name="ConcurrencyTest.testSynchronizedMapStorage" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest_testLoad - 2017.06.22 at 22h 47m 10s.xml">
+      <configuration name="SqlStorageTest.testLoad" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlFileStorageTest - 2017.05.24 at 18h 35m 14s.xml">
-      <configuration name="XmlFileStorageTest" configurationId="JUnit" />
+    <history-entry file="SqlStorageTest_testLoad_(1) - 2017.06.22 at 22h 51m 05s.xml">
+      <configuration name="SqlStorageTest.testLoad (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlFileStorageTest - 2017.05.24 at 18h 35m 57s.xml">
+    <history-entry file="XmlFileStorageTest - 2017.06.22 at 22h 58m 27s.xml">
       <configuration name="XmlFileStorageTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194594000" />
+    <option name="totallyTimeSpent" value="203293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1815,27 +1860,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5254471" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5254065" sideWeight="0.5046875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20021299" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19116081" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24121405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40440166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37906504" sideWeight="0.4953125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3699187" sideWeight="0.4953125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30487806" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18104367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1843,11 +1887,12 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="417" y="73" width="832" height="649" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32825205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1891,7 +1936,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Organization.java  added" />
     <MESSAGE value="All models changed!" />
     <MESSAGE value="Mock array implementation" />
     <MESSAGE value="Add resume constructors" />
@@ -1916,7 +1960,8 @@
     <MESSAGE value="web.xml  added" />
     <MESSAGE value="test servlet" />
     <MESSAGE value="Modified ResumeServlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified ResumeServlet" />
+    <MESSAGE value="DB PostgreSQL connected&#10;Some other changes (many!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB PostgreSQL connected&#10;Some other changes (many!)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1933,7 +1978,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1942,82 +1987,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/JsonFileStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/util/LocalDateAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file_storage/12583973-9795-4c35-b774-5fad3a9f4fd9" />
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/ArrayStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/ConcurrencyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-549">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/webapp5_Web_exploded.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/list.xhtml" />
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/XmlFileStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Section.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/OrganizationSection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-74">
           <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-944">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2039,7 +2012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2047,13 +2019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="209" column="115" lean-forward="false" selection-start-line="209" selection-start-column="115" selection-end-line="209" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -2102,14 +2067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/XmlFileStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
@@ -2140,50 +2097,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/web/TestServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="80" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logging.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2198,26 +2115,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/web/SectionHtmlType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#705#706#0" expanded="false" />
-            <element signature="e#758#759#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
-            <element signature="e#1486#1487#0" expanded="false" />
-            <element signature="e#1551#1552#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2237,46 +2138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.resume">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.string_section">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.contact">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2309,38 +2170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="142" column="7" lean-forward="true" selection-start-line="142" selection-start-column="7" selection-end-line="142" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1498153225000" expanded="true" signature="4893:4954" ph="INSERT INTO contact... " />
-            <marker date="1498153225000" expanded="true" signature="5444:5483" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/web/ResumeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -2351,16 +2180,264 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/sql/ConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/FileStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="25" column="81" lean-forward="true" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/SerializeFileStorage.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/IStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/XmlFileStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding>
+            <element signature="e#1610#1611#0" expanded="false" />
+            <element signature="e#1637#1638#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/FileStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/sql/SqlTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/sql/SqlExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/JsonFileStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/XmlFileStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/sql/Sql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#334#335#0" expanded="false" />
+            <element signature="e#392#393#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/CoreAbstractStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="135" column="43" lean-forward="true" selection-start-line="135" selection-start-column="43" selection-end-line="135" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/oleginno/webapp/storage/SqlStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbsequence:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.string_section_id_seq">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.resume">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.contact">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/model/Organization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2407#2408#0" expanded="true" />
+            <element signature="e#2447#2448#0" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2526#2527#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
+            <element signature="e#2642#2643#0" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2731#2732#0" expanded="true" />
+            <element signature="e#2813#2814#0" expanded="true" />
+            <element signature="e#3714#3715#0" expanded="true" />
+            <element signature="e#3764#3765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2469ff7/f0ec7237-21e5-4bb7-b6a4-ee44de9a815b/d9lo8jqbkb18m9.public.string_section">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/fragments/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="55" column="32" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/storage/SqlStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="145" column="45" lean-forward="false" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+          <folding>
+            <element signature="e#800#801#0" expanded="false" />
+            <element signature="e#849#850#0" expanded="false" />
+            <marker date="1498499395000" expanded="true" signature="1042:1115" ph="INSERT INTO resume... " />
+            <marker date="1498499395000" expanded="true" signature="1604:1671" ph="UPDATE resum... " />
+            <marker date="1498499395000" expanded="true" signature="2225:2432" ph="SELECT *\n F... resume" />
+            <marker date="1498499395000" expanded="true" signature="3162:3193" ph="DELETE FROM " />
+            <marker date="1498499395000" expanded="true" signature="3527:3620" ph="SELECT * FRO... resume" />
+            <marker date="1498499395000" expanded="true" signature="4423:4450" ph="SELECT count... resume" />
+            <marker date="1498499395000" expanded="true" signature="5024:5085" ph="INSERT INTO contact... " />
+            <marker date="1498499395000" expanded="true" signature="5552:5591" ph="DELETE FROM " />
+            <marker date="1498499395000" expanded="true" signature="5765:5819" ph="INSERT INTO period... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oleginno/webapp/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
